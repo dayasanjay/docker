@@ -421,30 +421,6 @@ How to check docker compose is installed or not?<br>
 docker-compose  --version<br>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Create a docker compose file for setting up dev environment.
 
 mysql container is linked with wordpress container.<br>
