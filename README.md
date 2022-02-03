@@ -1702,23 +1702,35 @@ docker node demote Worker1<br>
 ### Docker networking
 Docker networking is primarily used to establish communication between Docker containers and the outside world via the host machine where the Docker daemon is running.<br>
 When we install docker, docker installs a network by default in the host machine called docker0<br>
-<b>Docker network Drivers : </b> Docker handles communication between containers by creating a default bridge network, so you often don’t have to deal with networking and can instead focus on creating and running containers. This default bridge network works in most cases.<br>
+<b>Docker network Drivers : </b> <br>
+
+Docker handles communication between containers by creating a default bridge network, so you often don’t have to deal with networking and can instead focus on creating and running containers. This default bridge network works in most cases.<br>
+
 <b>The Bridge Driver</b><br>
+
 This is the default. Whenever you start Docker, a bridge network gets created and all newly started containers will connect automatically to the default bridge network.<br>
+
 <b>The Host Driver</b><br>
+
 As the name suggests, host drivers use the networking provided by the host machine. And it removes network isolation between the container and the host machine where Docker is running. For example, If you run a container that binds to port 80 and uses host networking, the container’s application is available on port 80 on the host’s IP address. You can use the host network if you don’t want to rely on Docker’s networking but instead rely on the host machine networking.<br>
+
 <b>The None Driver</b><br>
+
 The none network driver does not attach containers to any network. Containers do not access the external network or communicate with other containers. You can use it when you want to disable the networking on a container.<br>
+
 <b>The Overlay Driver </b><br>
+
 The Overlay driver is for multi-host network communication, as with Docker Swarm or Kubernetes. It allows containers across the host to communicate with each other without worrying about the setup. Think of an overlay network as a distributed virtualized network that’s built on top of an existing computer network.<br>
+
 <b>Basic Docker Networking Commands</b><br>
-connect     Connect a container to a network
-  create      Create a network <br>
-  disconnect  Disconnect a container from a network<br>
-  inspect     Display detailed information on one or more networks<br>
-  ls          List networks<br>
-  prune       Remove all unused networks<br>
-  rm          Remove one or more networks<br>
+
+  connect     ------> Connect a container to a network<br>
+  create      ------> Create a network <br>
+  disconnect  ------> Disconnect a container from a network<br>
+  inspect     ------> Display detailed information on one or more networks<br>
+  ls          ------> List networks<br>
+  prune       ------> Remove all unused networks<br>
+  rm          ------> Remove one or more networks<br>
 
 
 # -------------------BINGO..!!---------------------
